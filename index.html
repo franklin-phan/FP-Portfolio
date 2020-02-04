@@ -1,54 +1,89 @@
 <!DOCTYPE html>
 <html LANG='EN'>
-<head>
-    <meta charset="UTF-8">
-    <title>Franklin Phan Portfolio</title>
-</head>
-<h1>Franklin Phan</h1>
-<p>Aspiring Software Engineer</p>
-<!-- instructions
-Write the content of your portfolio include the following:
-Name and Tag Line
-List of your skills
-About you section
-Short but not too short. Tells us what you want us to know about you.
-Can include your education and other experience
-Include a picture (mark this up with the figure tag)
-Online presence, include links to:
-LinkedIn
-GitHub
-Other social media Instagram, FB, etc.
--->
-<figure>
-    <img src="closeup.jpg" alt="Picture" width="341" height="720">
-    <figcaption>Franklin (up close)</figcaption>
-</figure>
-<h2>About Me</h2>
-<p>I am a CS student at Make School, focusing on Front-end and Back-end software development.</p>
-<h2>Skills:</h2>
-<ul>
-    <li>Python</li>
-    <li>Creative Straegy</li>
-    <li>Critical Thinking</li>
-</ul>
-
-<h2>Personal Interests:</h2>
-<ul>
-    <li>Film Reviewing</li>
-    <li>Culinary Arts</li>
-    <li>World Travel</li>
-</ul>
-
-<h2>Projects:</h2>
-<ul>
-    <li>Pantry</li>
-    <li>Team Project</li>
-    <li>World Travel</li>
-</ul>
-<h2>Online Presence</h2>
-<ul>
-    <li><a href="https://www.linkedin.com/in/franklin-phan-a9b7a0166/">LinkedIn</a></li>
-    <li><a href="https://github.com/franklin-phan">Github</a></li>
-    <li><a href="https://www.instagram.com/franklin.phan_/">Instagram</a></li>
-</ul>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+        <title>Franklin Phan Portfolio</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class='profile'>
+            <h1>Franklin Phan</h1>
+            <figure>
+                <p>Aspiring Software Engineer</p>
+                <img class = "profilepic" src="googlebike.jpg" alt="Picture">
+                <figcaption>Franklin (on a bike)</figcaption>
+            </figure>
+        </div>
+            <section>
+                <div class="description">
+                    <h2>About Me:</h2>
+                    <p>I am currently a CS student at Make School, focusing on Front-end and Back-end software development.</p>
+                </div>
+                <div class="description">
+                    <header>
+                    <h3>Skills:</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>Django</li>
+                            <li>Creative Strategy</li>
+                            <li>Critical Thinking</li>
+                        </ul>
+                    </header>
+                </div>
+                <div class="description">
+                    <header>
+                    <h4>Projects:</h4>
+                    <a href="https://pantry-app-fnp.herokuapp.com/">Pantry</a>
+                    <img class = "logo" src="pantry_logo.jpg" alt="Pantry Homepage">
+                    Slack Confession Bot
+                    <img class = "logo" src="logo.png" alt="slack">
+                    </header>
+                </div>
+                <div class="description">
+                    <header>
+                        <h5>Personal Interests:</h5>
+                            <ul>
+                                <li>Rotten Tomatoes Audience Reviewer</li>
+                                <li>Culinary Arts</li>
+                                <li>World Travel</li>
+                            </ul>
+                        </header>
+                    </div>
+                <div class="description">
+                    <header>
+                    <h6>Online Presence</h6>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/franklin-phan-a9b7a0166/">LinkedIn</a></li>
+                            <li><a href="https://github.com/franklin-phan">Github</a></li>
+                            <li><a href="https://www.instagram.com/franklin.phan_/">Instagram</a></li>
+                        </ul>
+                    </header>
+                </div>
+                <div class="description" id="contact">
+                    <header>
+                        <h6>Contact Me!</h6>
+                        <div class="contact-form">
+                            Name:
+                            <input type = "text" name = "name">
+                            <br>
+                            Email:
+                            <input type = "text" name = "email"><br>
+                            Phone Number:
+                                <form oninput="x.value=parseInt(a.value)">0
+                                        <input type="range" min="1" max="9999999999" id="a" value="9999999999">9999999999
+                                        <br>
+                                        <input type="text" name="x">
+                                </form>
+                            <br>
+                            Message:
+                            <input type = "text" name = "message"><br>
+                            <button type="reset" value="Reset">Reset</button>
+                            <input type="submit" value="Submit">
+                        </div>
+                    </header>
+                </div>
+            </section>
+        </div>
+    </body>
 </html>
