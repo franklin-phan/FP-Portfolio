@@ -5,19 +5,20 @@ body {
   background-color:#ccf5ff;
 }
 .description:nth-child(2n-1){
-    background-color:#aa80ff; 
+    background-color:#ccb3ff; 
 }
 .description:nth-child(2n){
-  background-color:#884dff; 
+  background-color:#aa80ff; 
 }
 .profile {
-  background-color:#7733ff;
+  background-color:#aa80ff;
+  grid-area:p;
 }
 section {
     margin:5px;
 }
 .container {
-    width: 800px;
+    width: 100%;
     margin: auto;
 }
 img.profilepic {
@@ -54,9 +55,55 @@ p {
 }
 #contact{
   padding: 30px;
+  grid-area: c;
 }
 .contact-form{
   width: 300px;
   height: 300px;
   margin: auto;
+  grid-area: c;
+}
+.wrapper{
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(6, 1fr);
+  /* grid-template-rows: auto; */
+  /* 
+  The named areas below define where elements with
+  those names are placed on the grid. 
+  */
+  grid-template-areas:  "p p p p p p"
+                        "a a a a s s"
+                        "a a a a s s"
+                        "j j j i i i"
+                        "j j j i i i"
+                        "o o o o o o"
+                        ". c c c c .";
+}
+@media only screen and (max-width: 600px){
+  .wrapper{
+    grid-template-areas:  
+    "p p p p p p"
+    "a a a a a a"
+    "s s s s s s"
+    "j j j j j j"
+    "i i i i i i"
+    "o o o o o o"
+    "c c c c c c";
+  }
+}
+#about{
+  grid-area: a;
+}
+#skills{
+  grid-area: s;
+}
+#projects{
+  grid-area: j;
+}
+#interests{
+  grid-area: i;
+}
+#online{
+  grid-area: o;
 }
